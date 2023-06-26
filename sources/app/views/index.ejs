@@ -1,0 +1,43 @@
+<!-- include header -->
+    <%-include('template/_header')%>
+<!-- /include header -->
+
+<!-- main -->
+
+<!-- navbar -->
+<div class="jumbotron">
+    <h3>maintenance management system</h3>
+    <blockquote>from mejangoding.com</blockquote>
+  </div>
+  <!-- /navbar -->
+
+  <!-- navigate -->
+  <div class="btn_add">
+    <a href="/add_activities" class="btn btn-secondary">Add activities</a>
+  </div>
+  <!-- /navigate -->
+  
+<!-- content -->
+<div class="content">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Facilities_ID</th>
+        <th scope="col">Facilities Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%-include('template/_show')%>
+    </tbody>
+  </table>
+</div>
+<!-- /content -->
+
+<!-- /main -->
+
+<!-- include footer -->
+    <%-include('template/_footer')%>
+<!-- /include footer -->

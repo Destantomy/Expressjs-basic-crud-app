@@ -1,0 +1,41 @@
+<!-- include header -->
+<%-include('template/_header')%>
+<!-- /include header -->
+
+<!-- main -->
+<!-- navbar -->
+<div class="jumbotron">
+    <h3>maintenance management system</h3>
+    <blockquote>from mejangoding.com</blockquote>
+</div>
+  <!-- /navbar -->
+<!-- content -->
+<div class="form">
+    <form action="#" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Facility ID</label>
+            <input type="text" name="f_id" class="form-control" id="exampleFormControlInput1" autofocus>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Facility Name</label>
+            <input type="text" name="f_name" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Status</label>
+            <select class="form-select" aria-label="Default select example">
+              <option value="Run" selected>Run</option>
+              <option value="MTC">Maintenance</option>
+            </select>
+        </div>
+        <div class="btn-save">
+            <a href="#" class="btn btn-secondary">Update</a>
+            <a href="/" class="btn btn-secondary">Back</a>
+        </div>
+    </form>
+</div>
+    <!-- /content -->
+<!-- /main -->
+
+<!-- include footer -->
+<%-include('template/_footer')%>
+<!-- /include footer -->
