@@ -1,10 +1,12 @@
+<% for(let i=0; i < tasks.length; i++) {%>
 <tr>
-    <th scope="row">1</th>
-    <td>0001</td>
-    <td>Cooler SO3 Plant</td>
-    <td>Maintenance</td>
+    <th scope="row"><%= i+1 %></th>
+    <td><%= tasks[i].series%></td>
+    <td><%= tasks[i].name%></td>
+    <td><%= tasks[i].status%></td>
     <td>
-        <a href="/update_activities" class="btn btn-warning">u</a>
+        <a href="/update_activities?id=<%= tasks[i]._id%>" class="btn btn-warning">u</a>
         <a href="#" class="btn btn-danger">d</a>
     </td>
 </tr>
+<%}%>

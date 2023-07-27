@@ -1,16 +1,21 @@
 const mongoose = require('mongoose');
 
 const scheme = new mongoose.Schema({
-  f_name: {
+  series: {
     type: String,
     required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+    unique: true,
   },
   status: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
-const userDB = mongoose.model('userdb', scheme);
+const userDB = mongoose.model('crud_dms', scheme);
 
 module.exports = userDB;

@@ -1,16 +1,19 @@
 /* eslint-disable max-len */
 const express = require('express');
-const app = express();
+const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
 const connectDB = require('./app/database/connection');
+const app = express();
 
 // --start section configure to connect with dotenv file--
-const dotenv = require('dotenv');
+
 dotenv.config({path: './sources/config.env'});
+
 // insert my app detail in .env file or if not available use 8080
 const port = process.env.port || 8080;
+
 // --end section configure to connect with dotenv file--
 
 // log requests using morgan

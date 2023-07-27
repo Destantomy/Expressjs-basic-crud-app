@@ -1,25 +1,26 @@
 <!-- content -->
 <div class="form">
-    <form action="/api/tasks" method="POST">
+    <form action="/api/task/<%= tasks._id%>" method="POST">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Facility Series</label>
-            <input type="text" name="series" class="form-control" id="exampleFormControlInput1" autofocus>
+            <input type="text" name="id" value="<%= tasks._id%>" class="form-control" id="exampleFormControlInput1" hidden>
+            <input type="text" name="series" value="<%= tasks.series%>" class="form-control" id="exampleFormControlInput1" autofocus>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Facility Name</label>
-            <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
+            <input type="text" name="name" value="<%= tasks.name%>" class="form-control" id="exampleFormControlInput1">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Status</label>
             <select class="form-select" name="status" aria-label="Default select example">
-              <option value="Run" selected>Run</option>
+              <option value="Run">Run</option>
               <option value="MTC">Maintenance</option>
             </select>
         </div>
         <div class="btn-save">
-            <button type="submit" class="btn btn-secondary">Save</button>
+            <button type="submit" class="btn btn-secondary">Update</button>
             <a href="/" class="btn btn-secondary">Back</a>
         </div>
     </form>
-  </div>
-    <!-- /content -->
+</div>
+<!-- /content -->
