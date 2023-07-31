@@ -8,10 +8,16 @@ router.get('/', services.homeRoutes);
 router.get('/add_activities', services.addActivities);
 router.get('/update_activities', services.updateActivities);
 
+// API postman testing
+// router.post('/api/tasks', controller.create);
+// router.get('/api/tasks', controller.find);
+// router.put('/api/tasks/:id', controller.update);
+// router.delete('/api/tasks/:id', controller.delete);
+
 // API
 router.post('/api/tasks', controller.create);
 router.get('/api/tasks', controller.find);
-router.put('/api/tasks/:id', controller.update);
-router.delete('/api/tasks/:id', controller.delete);
+router.post('/api/tasks/:id', controller.update);
+router.post('/api/taskdel/:id', controller.delete);
 
 module.exports = router;

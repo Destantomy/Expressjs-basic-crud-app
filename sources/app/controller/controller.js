@@ -70,7 +70,8 @@ exports.update = (req, res) => {
         if (!data) {
           res.status(404).send({message: `data id: ${id} can not be updated.`});
         } else {
-          res.send(data);
+          // postman testing --> res.send(data);
+          res.redirect('/');
         }
       })
       .catch(error => {
@@ -86,7 +87,8 @@ exports.delete = (req, res) => {
         if (!data) {
           res.status(404).send({message: `data id: ${id} maybe is wrong`});
         } else {
-          res.send({message: 'data was deleted successfuly'});
+          // postman testing --> res.send({message: 'data was deleted successfuly'});
+          res.redirect('/');
         }
       })
       .catch(error => {

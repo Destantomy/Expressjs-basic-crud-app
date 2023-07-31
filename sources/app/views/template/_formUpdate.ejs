@@ -1,6 +1,6 @@
 <!-- content -->
 <div class="form">
-    <form action="/api/task/<%= tasks._id%>" method="POST">
+    <form action="/api/tasks/<%=tasks._id%>" method="POST">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Facility Series</label>
             <input type="text" name="id" value="<%= tasks._id%>" class="form-control" id="exampleFormControlInput1" hidden>
@@ -18,7 +18,7 @@
             </select>
         </div>
         <div class="btn-save">
-            <button type="submit" class="btn btn-secondary">Update</button>
+            <button type="submit" class="btn btn-success">Update</button>
             <a href="/" class="btn btn-secondary">Back</a>
         </div>
     </form>

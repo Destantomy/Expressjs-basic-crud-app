@@ -5,8 +5,10 @@
     <td><%= tasks[i].name%></td>
     <td><%= tasks[i].status%></td>
     <td>
-        <a href="/update_activities?id=<%= tasks[i]._id%>" class="btn btn-warning">u</a>
-        <a href="#" class="btn btn-danger">d</a>
+        <a href="/update_activities?id=<%= tasks[i]._id%>" class="btn btn-warning btn-ud">u</a>
+        <form action="/api/taskdel/<%= tasks[i]._id%>" method="POST" class="btn-ud">
+            <button class="btn btn-danger">d</button>
+        </form>
     </td>
 </tr>
 <%}%>
